@@ -1,0 +1,25 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str1 = "Kalle"
+var str2 = "Andersson"
+var str3 = "Travbanan"
+var str4 = "Tumba"
+var str5 = "Sverige"
+
+
+func getURL(s1: String, s2: String, s3: String, s4: String, s5: String) -> (String) {
+    let val1 = "FirstName="
+    let val2 = "&LastName="
+    let val3 = "&Street="
+    let val4 = "&City="
+    let val5 = "&State="
+    let URL_Fix = "http://54.229.176.110/submit_1.php?"
+    var URL = ""
+    URL = URL_Fix + val1 + s1 + val2 + s2 + val3 + s3 + val4 + s4 + val5 + s5
+    return (URL)
+}
+
+var URLX = getURL(s1: str1, s2: str2, s3: str3, s4: str4, s5: str5)
+print(URLX)
